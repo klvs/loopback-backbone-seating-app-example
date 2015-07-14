@@ -1,7 +1,16 @@
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
+
 var app = module.exports = loopback();
+
+var ds = loopback.createDataSource('mysql', {
+	host: 'localhost',
+	port: 3306,
+	database: 'seatin_assignment_app',
+	username: 'root',
+	password: 'dev-89-dl6'
+});
 
 app.start = function() {
   // start the web server
